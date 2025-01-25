@@ -14,11 +14,11 @@ fi
 if[ -z "$component" ]; then
   echo "component not exists"
 fi
-if[ -z "$projectname" ]; then
-  echo "projectname not exists"
+if[ -z "$project_name" ]; then
+  echo "project_name not exists"
 fi
 
-git clone https://github.com/devps23/{{projectname}}-{{component}}.git
+git clone https://github.com/devps23/{{project_name}}-{{component}}.git
 cd {{projectname}}-{{component}}
-mysql -h {{RDS_HOST}} -u{{RDS_USERNAME}} -p{{RDS_PASSWORD}} < schema/{{component}}.sql
+mysql -h {{RDS_DB_HOST}} -u{{RDS_USERNAME}} -p{{RDS_PASSWORD}} < schema/{{component}}.sql
 
