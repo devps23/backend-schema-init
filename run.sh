@@ -2,7 +2,7 @@ source /data/secrets.txt
 cat /data/secrets.txt
 
 if [ -z "$RDS_DB_HOST" ]; then
-  echo "RDS_HOST not exists"
+  echo "RDS_DB_HOST not exists"
   exit 1
 fi
 if[ -z "$RDS_DB_USERNAME" ]; then
