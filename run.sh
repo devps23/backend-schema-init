@@ -18,7 +18,7 @@ if [ -z "$project_name" ]; then
   echo "project_name not exists"
 fi
 
-git clone https://github.com/devps23/{{project_name}}-{{component}}.git
-cd {{project_name}}-{{component}}
-mysql -h {{RDS_DB_HOST}} -u{{RDS_DB_USERNAME}} -p{{RDS_DB_PASSWORD}} < schema/{{component}}.sql
+git clone https://github.com/devps23/${project_name}-${component}.git
+cd ${project_name}-${component}
+mysql -h ${RDS_DB_HOST} -u${RDS_DB_USERNAME} -p${RDS_DB_PASSWORD} < schema/${component}.sql
 
