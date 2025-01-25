@@ -5,16 +5,16 @@ if [ -z "$RDS_DB_HOST" ]; then
   echo "RDS_DB_HOST not exists"
   exit 1
 fi
-if[ -z "$RDS_DB_USERNAME" ]; then
+if [ -z "$RDS_DB_USERNAME" ]; then
   echo "RDS_DB_USERNAME not exists"
 fi
-if[ -z "$RDS_DB_PASSWORD" ]; then
+if [ -z "$RDS_DB_PASSWORD" ]; then
   echo "RDS_DB_PASSWORD not exists"
 fi
-if[ -z "$component" ]; then
+if [ -z "$component" ]; then
   echo "component not exists"
 fi
-if[ -z "$project_name" ]; then
+if [ -z "$project_name" ]; then
   echo "project_name not exists"
 fi
 
