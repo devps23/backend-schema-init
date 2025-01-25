@@ -6,10 +6,10 @@ if [ -z "$RDS_DB_HOST" ]; then
   exit 1
 fi
 if[ -z "$RDS_DB_USERNAME" ]; then
-  echo "RDS_USERNAME not exists"
+  echo "RDS_DB_USERNAME not exists"
 fi
 if[ -z "$RDS_DB_PASSWORD" ]; then
-  echo "RDS_PASSWORD not exists"
+  echo "RDS_DB_PASSWORD not exists"
 fi
 if[ -z "$component" ]; then
   echo "component not exists"
