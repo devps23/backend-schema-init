@@ -25,5 +25,5 @@ fi
 git clone https://github.com/devps23/${project_name}-${component}
 cd ${project_name}-$component
 
-mysql -h $RDS_DB_HOST -u$RDS_DB_USER -p$RDS_DB_PASSWORD < schema/backend.sql
+mysql -h rds-dev.cvkemucwmc9p.us-east-1.rds.amazonaws.com -umyadmin -pExpenseApp123<schema/backend.sql
 
