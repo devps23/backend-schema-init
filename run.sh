@@ -24,5 +24,5 @@ fi
 
 git clone https://github.com/devps23/${project_name}-${component}.git
 cd ${project_name}-${component}
-mysql -h ${RDS_DB_HOST} -u${RDS_DB_USERNAME} -p${RDS_DB_PASSWORD} <schema/${component}.sql
+mysql -h ${RDS_DB_HOST} -u${RDS_DB_USERNAME} -p${RDS_DB_PASSWORD}<schema/${component}.sql
 
