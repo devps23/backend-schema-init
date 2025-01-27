@@ -5,8 +5,8 @@ if [ -z "$RDS_DB_HOST" ]; then
   echo "RDS_DB_HOST not exists"
   exit 1
 fi
-if [ -z "$RDS_DB_USERNAME" ]; then
-  echo "RDS_DB_USERNAME not exists"
+if [ -z "$RDS_DB_USER" ]; then
+  echo "RDS_DB_USER not exists"
   exit 1
 fi
 if [ -z "$RDS_DB_PASSWORD" ]; then
@@ -25,5 +25,5 @@ fi
 git clone https://github.com/devps23/${project_name}-${component}
 cd ${project_name}-$component
 
-mysql -h${RDS_DB_HOST} -u${RDS_DB_USERNAME} -p${RDS_DB_PASSWORD} <schema/${component}.sql
+mysql -h $RDS_DB_HOST -u$RDS_DB_USER -p$RDS_DB_PASSWORD < schema/backend.sql
 
