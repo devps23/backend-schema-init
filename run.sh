@@ -7,15 +7,19 @@ if [ -z "$RDS_DB_HOST" ]; then
 fi
 if [ -z "$RDS_DB_USERNAME" ]; then
   echo "RDS_DB_USERNAME not exists"
+  exit 1
 fi
 if [ -z "$RDS_DB_PASSWORD" ]; then
   echo "RDS_DB_PASSWORD not exists"
+  exit 1
 fi
 if [ -z "$component" ]; then
   echo "component not exists"
+  exit 1
 fi
 if [ -z "$project_name" ]; then
   echo "project_name not exists"
+  exit 1
 fi
 
 git clone https://github.com/devps23/${project_name}-${component}.git
