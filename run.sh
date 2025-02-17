@@ -5,10 +5,6 @@ if [ -z "$DB_HOST" ]; then
   echo "DB_HOST not exists"
   exit 1
 fi
-if [ -z "$RDS_DB_HOST" ]; then
-  echo "RDS_DB_HOST not exists"
-  exit 1
-fi
 if [ -z "$RDS_DB_USER" ]; then
   echo "RDS_DB_USER not exists"
   exit 1
