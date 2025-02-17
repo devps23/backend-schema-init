@@ -26,4 +26,5 @@ git clone https://github.com/devps23/${project_name}-${component}
 cd ${project_name}-$component
 
 mysql -h${DB_HOST} -u${RDS_DB_USER} -p${RDS_DB_PASSWORD} <schema/backend.sql
+echo mysql -h${DB_HOST} -u${RDS_DB_USER} -p${RDS_DB_PASSWORD} <schema/backend.sql
 
