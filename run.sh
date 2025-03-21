@@ -1,5 +1,9 @@
 source /data/secrets.txt
 cat /data/secrets.txt
+echo
+echo
+echo
+echo env
  git clone https://github.com/devps23/${project_name}-${component}
   cd ${project_name}-${component}
 if [ "${db_type}" == "mongodb" ]; then
