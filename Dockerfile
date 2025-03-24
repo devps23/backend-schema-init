@@ -7,7 +7,7 @@
 # ENTRYPOINT    ["bash", "/run.sh"]
 
 
-FROM        docker.io/node:16 As builder
+FROM        docker.io/node
 RUN         apt-get update && \
             apt-get install -y wget gnupg unzip && \
             wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | apt-key add -
