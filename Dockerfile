@@ -5,3 +5,4 @@ RUN           dnf install mysql-community-client-8.3.0-1.el8.x86_64.rpm mysql-co
 RUN           rm -f *.tar *.rpm
 COPY          run.sh /
 ENTRYPOINT    ["bash", "/run.sh"]
+ADD            curl -L -O https://truststore.pki.rds.amazonaws.com/global/global-bundle.pem   /app/rds-combined-ca-bundle.pem
