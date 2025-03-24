@@ -6,6 +6,7 @@ echo
 env
 git clone https://github.com/devps23/${project_name}-${component}
 cd ${project_name}-${component}
+ echo ${project_name}-${component}
 if [ ${db_type} == "mongodb" ]; then
    curl -L -O https://truststore.pki.rds.amazonaws.com/global/app/rds-combined-ca-bundle.pem
    mongodb://docdb:roboshop12345@docdb.cluster-cvkemucwmc9p.us-east-1.docdb.amazonaws.com:27017/catalogue?tls=true&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false
@@ -37,7 +38,7 @@ if [ ${db_type} == "mysql" ]; then
 fi
 
 
-  echo ${project_name}-${component}
+
 
 
 #cat /data/secrets.txt
