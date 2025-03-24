@@ -8,7 +8,7 @@ git clone https://github.com/devps23/${project_name}-${component}
 cd ${project_name}-${component}
  echo ${project_name}-${component}
 if [ ${db_type} == "mongodb" ]; then
-   curl -L -O https://truststore.pki.rds.amazonaws.com/global/global-bundle.pem
+   curl -L -O /app/rds-combined-ca-bundle.pem https://truststore.pki.rds.amazonaws.com/global/global-bundle.pem
    mongosh docdb.cluster-cvkemucwmc9p.us-east-1.docdb.amazonaws.com:27017 --tls --tlsCAFile rds-combined-ca-bundle.pem --retryWrites=false --username ${docdb_username} --password ${docdb_password} <schema/catalogue.js
 fi
 if [ ${db_type} == "mysql" ]; then
