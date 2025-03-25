@@ -10,7 +10,7 @@ cd ${project_name}-${component}
 if [ ${db_type} == "mongodb" ]; then
 #   curl -L -O /app/rds-combined-ca-bundle.pem https://truststore.pki.rds.amazonaws.com/global/global-bundle.pem
     wget https://truststore.pki.rds.amazonaws.com/global/global-bundle.pem
-    mongosh docdb.cluster-cvkemucwmc9p.us-east-1.docdb.amazonaws.com:27017 --tls --tlsCAFile global-bundle.pem --retryWrites=false --username ${docdb_username} --password ${docdb_password} <schema/catalogue.js
+    mongosh docdb.cluster-cvkemucwmc9p.us-east-1.docdb.amazonaws.com:27017 --tls --tlsCAFile global-bundle.pem --retryWrites=false --username ${docdb_username} --password ${docdb_password} </schema/catalogue.js
 fi
 if [ ${db_type} == "mysql" ]; then
     if [ -z "${DB_HOST}" ]; then
