@@ -1,6 +1,5 @@
 FROM         docker.io/redhat/ubi8
 COPY         mongo.repo  /etc/yum.repos.d/mongodb-org.repo
-RUN          yum update
 RUN          yum install unzip  mongodb-mongosh  -y
 RUN          mkdir -p app
 WORKDIR      app
