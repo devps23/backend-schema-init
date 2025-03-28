@@ -9,7 +9,7 @@ cd ${project_name}-${component}
  echo ${project_name}-${component}
 if [ ${db_type} == "mongodb" ]; then
     wget https://truststore.pki.rds.amazonaws.com/global/global-bundle.pem
-    mongo --tls --host my-docdb-cluster.cluster-cvkemucwmc9p.us-east-1.docdb.amazonaws.com:27017 --tlsCAFile global-bundle.pem --username docdb --password roboshop123 <schema/catalogue.js
+    mongo --tls --host my-docdb-cluster.cluster-cvkemucwmc9p.us-east-1.docdb.amazonaws.com:27017 --tlsCAFile global-bundle.pem --username docdb --password roboshop123 <schema/${component}.js
 fi
 if [ ${db_type} == "mysql" ]; then
     if [ -z "${DB_HOST}" ]; then
