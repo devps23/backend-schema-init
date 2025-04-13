@@ -33,6 +33,7 @@ if [ "${db_type}" == 'mysql' ]; then
         echo "project_name not exists"
         exit 1
       fi
+  mysql_secure_installation --set-${RDS_DB_USER}-pass ${RDS_DB_PASSWORD}
   mysql -h${DB_HOST} -u${RDS_DB_USER} -p${RDS_DB_PASSWORD} <schema/${component}.sql
   echo mysql -h${DB_HOST} -u${RDS_DB_USER} -p${RDS_DB_PASSWORD} <schema/${component}.sql
 fi
@@ -41,18 +42,6 @@ fi
 
 
 
-#cat /data/secrets.txt
-#echo
-#echo
-#echo
-#env
-# git clone https://github.com/devps23/${project_name}-${component}
-#  cd ${project_name}-${component}
-#if [ "${db_type}" == "mongodb" ]; then
-#  echo ${project_name}-${component}
-#  curl -L -o https://truststore.pki.rds.amazonaws.com/global/global-bundle.pem /app/global-bundle.pem
-#   mongosh docdb.cluster-cvkemucwmc9p.us-east-1.docdb.amazonaws.com:27017 --tls --tlsCAFile global-bundle.pem --retryWrites=false --username docdb --password roboshop12345 </app/schema/catalogue.sql
-#fi
 
 
 
