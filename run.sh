@@ -33,7 +33,7 @@ if [ "${db_type}" == 'mysql' ]; then
         echo "project_name not exists"
         exit 1
       fi
-  mysql_secure_installation --set-${RDS_DB_USER}-pass ${RDS_DB_PASSWORD}
+
   mysql -h${DB_HOST} -u${RDS_DB_USER} -p${RDS_DB_PASSWORD} <schema/${component}.sql
   echo mysql -h${DB_HOST} -u${RDS_DB_USER} -p${RDS_DB_PASSWORD} <schema/${component}.sql
 fi
